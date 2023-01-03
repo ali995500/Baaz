@@ -21,7 +21,7 @@ class SocialButtonsList extends StatelessWidget {
         const SizedBox(height: 16.5),
         SocialButtonsItems(
           title: 'Resume',
-          image: 'stackoverflow.png',
+          image: 'OIP.png',
           onTap: () => launchURL('resume.io/r/OtpY4DxXm/'),
         ),
         const SizedBox(height: 16.5),

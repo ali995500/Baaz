@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:site/app/core/app_colors.dart';
 
-
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
 
@@ -27,16 +26,33 @@ class Header extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 80),
-              SizedBox(
-                height: 180,
-                width: 180,
-                child: CircleAvatar(
-                  radius: 50,
-                  backgroundColor: AppColors.primary,
-                  child: Padding(
-                    padding: const EdgeInsets.all(4),
-                    child: ClipOval(
-                      child: Image.asset('assets/profile.png'),
+              ClipOval(
+
+                child: Container(
+                  decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          spreadRadius: 6,
+                          blurRadius: 4.0,
+                          blurStyle: BlurStyle.outer,
+                          color: Colors.cyan.shade300,
+                          offset: Offset(0.0,10.0),
+
+                        ),
+                      ]
+
+                  ),
+                  height: 300,
+                  width: 300,
+                  child: CircleAvatar(
+                    radius: 100,
+                    backgroundColor: AppColors.primary,
+                    child: Padding(
+                      padding: const EdgeInsets.all(4),
+                      child: ClipOval(
+                        child: Image.asset('assets/profile.png'),
+
+                      ),
                     ),
                   ),
                 ),
