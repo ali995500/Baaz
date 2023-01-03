@@ -14,47 +14,32 @@ class Header extends StatelessWidget {
       child: Stack(
         alignment: Alignment.topCenter,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16),
-            child: Image.asset(
-              'assets/header-background.png',
-              fit: BoxFit.cover,
-            ),
-          ),
+          // ClipRRect(
+          //   borderRadius: BorderRadius.circular(16),
+          //   child: Image.asset(
+          //     'assets/header-background.png',
+          //     fit: BoxFit.cover,
+          //   ),
+          // ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 80),
-              ClipOval(
-
-                child: Container(
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          spreadRadius: 6,
-                          blurRadius: 4.0,
-                          blurStyle: BlurStyle.outer,
-                          color: Colors.cyan.shade300,
-                          offset: Offset(0.0,10.0),
-
-                        ),
-                      ]
-
+              Container(
+                decoration: const BoxDecoration(boxShadow: [
+                  BoxShadow(
+                    spreadRadius: 2,
+                    blurRadius: 1.0,
+                    blurStyle: BlurStyle.normal,
+                    color: AppColors.primary,
                   ),
-                  height: 300,
-                  width: 300,
-                  child: CircleAvatar(
-                    radius: 100,
-                    backgroundColor: AppColors.primary,
-                    child: Padding(
-                      padding: const EdgeInsets.all(4),
-                      child: ClipOval(
-                        child: Image.asset('assets/profile.png'),
-
-                      ),
-                    ),
-                  ),
+                ]),
+                height: 200,
+                width: 200,
+                child: Padding(
+                  padding: const EdgeInsets.all(4),
+                  child: Image.asset('assets/profile.png'),
                 ),
               ),
               const SizedBox(height: 25),

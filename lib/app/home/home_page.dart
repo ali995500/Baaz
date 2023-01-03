@@ -12,15 +12,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: Align(
-        alignment: Alignment.topCenter,
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 450),
-          child: ListView(
-            children: const [
-              Header(),
-              SocialButtonsList(),
-            ],
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+          image: AssetImage('assets/flutter-image.jpg'),
+          fit: BoxFit.fill,
+          colorFilter: ColorFilter.mode(
+            AppColors.primary,
+            BlendMode.multiply,
+          ),
+        )),
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 450),
+            child: ListView(
+              children: const [
+                Header(),
+                SocialButtonsList(),
+              ],
+            ),
           ),
         ),
       ),

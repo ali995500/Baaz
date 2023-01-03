@@ -10,7 +10,7 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 40,
       margin: const EdgeInsets.only(top: 4),
       color: AppColors.primary,
       child: Row(

@@ -23,13 +23,13 @@ class SocialButtonsItems extends StatelessWidget {
 
       borderRadius: BorderRadius.circular(8),
       child: Container(
-        height: 50,
-        width: 278,
+        height: 40,
+        width: 250,
         padding: const EdgeInsets.only(left: 58),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           color: AppColors.primary,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Colors.white,
               blurRadius: 2.0,
