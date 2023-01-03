@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_glow/flutter_glow.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -43,12 +44,14 @@ class Header extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 25),
-              Text(
+              GlowText(
                 'Arbaaz',
                 style: GoogleFonts.montserrat(
                   color: AppColors.light,
                   fontSize: 24,
                 ),
+                glowColor: AppColors.primary,
+                blurRadius: 2,
               ),
               const SizedBox(height: 4),
               Text(

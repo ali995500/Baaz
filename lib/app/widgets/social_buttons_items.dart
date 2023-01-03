@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_glow/flutter_glow.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,15 +29,21 @@ class SocialButtonsItems extends StatelessWidget {
         padding: const EdgeInsets.only(left: 58),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: AppColors.primary,
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.white,
-              blurRadius: 2.0,
-              spreadRadius: 0.0,
-              offset: Offset(2.0, 2.0), // shadow direction: bottom right
-            )
-          ],
+          color: AppColors.primary.withOpacity(0.0),
+          // boxShadow: const [
+          //   BoxShadow(
+          //     color: Colors.white,
+          //     blurRadius: 2.0,
+          //     spreadRadius: 0.0,
+          //     offset: Offset(2.0, 2.0), // shadow direction: bottom right
+          //   ),
+          //   BoxShadow(
+          //     color: Colors.white,
+          //     blurRadius: 2.0,
+          //     spreadRadius: 0.0,
+          //     offset: Offset(2.0, 2.0), // shadow direction: bottom right
+          //   ),
+          // ],
         ),
         child: Row(
           children: [
@@ -61,7 +68,7 @@ class SocialButtonsItems extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 10),
-            Text(
+            GlowText(
               title,
               style: GoogleFonts.inter(
                 fontSize: 18,
