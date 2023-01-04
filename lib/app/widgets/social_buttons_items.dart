@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_glow/flutter_glow.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -21,15 +22,15 @@ class SocialButtonsItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-
       borderRadius: BorderRadius.circular(8),
       child: Container(
         height: 40,
         width: 250,
         padding: const EdgeInsets.only(left: 58),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          color: AppColors.primary.withOpacity(0.0),
+          borderRadius: BorderRadius.circular(50),
+          color: AppColors.primary.withOpacity(0.50),
+
           // boxShadow: const [
           //   BoxShadow(
           //     color: Colors.white,
@@ -45,39 +46,42 @@ class SocialButtonsItems extends StatelessWidget {
           //   ),
           // ],
         ),
-        child: Row(
-          children: [
-            Container(
-              height: 29,
-              width: 29,
-              decoration: BoxDecoration(
-                color: AppColors.light,
-                borderRadius: BorderRadius.circular(50),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.shadow.withOpacity(0.2),
-                    spreadRadius: 4,
-                    blurRadius: 4,
-                    offset: const Offset(0, 2),
-                  ),
-                ],
+          child: Row(
+            children: [
+              Container(
+                height: 29,
+                width: 29,
+                decoration: BoxDecoration(
+                  color: AppColors.light,
+                  borderRadius: BorderRadius.circular(50),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.shadow.withOpacity(0.1),
+                      spreadRadius: 10,
+                      blurRadius: 50,
+                      blurStyle: BlurStyle.inner,
+                      offset: const Offset(0, 2),
+                    ),
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(4),
+                  child: Image.asset('assets/$image'),
+                ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(4),
-                child: Image.asset('assets/$image'),
+              GlowText(
+                title,
+                glowColor: Color.alphaBlend(
+                    AppColors.background, AppColors.background),
+                style: GoogleFonts.inter(
+                  fontSize: 18,
+                  color: AppColors.light,
+                ),
               ),
-            ),
-            const SizedBox(width: 10),
-            GlowText(
-              title,
-              style: GoogleFonts.inter(
-                fontSize: 18,
-                color: AppColors.light,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
-    );
+      );
+
   }
 }

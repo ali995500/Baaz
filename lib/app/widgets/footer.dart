@@ -10,8 +10,9 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
-      margin: const EdgeInsets.only(top: 4),
+      height: 39,
+      margin: const EdgeInsets.only(top:0.5,),
+
       color: AppColors.primary,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -6,20 +6,22 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:site/app/widgets/social_buttons_items.dart';
 
-import 'dart:math' as math;
+
 
 class SocialButtonsList extends StatelessWidget {
   const SocialButtonsList({Key? key}) : super(key: key);
 
-  void launchURL(String url) async => await launchUrl(
+  void launchURL(String url) async =>
+      await launchUrl(
         Uri.parse('https://$url'),
         webOnlyWindowName: '_blank',
       );
 
   @override
   Widget build(BuildContext context) {
-
     final btnKey = GlobalKey<State>();
+
+
 
     return Column(
       children: [
@@ -50,6 +52,7 @@ class SocialButtonsList extends StatelessWidget {
               ),
               child: ElevatedButton(
                 key: btnKey,
+
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.transparent),
                   shape: MaterialStateProperty.all(
@@ -70,6 +73,7 @@ class SocialButtonsList extends StatelessWidget {
                 child: const Padding(
                   padding: EdgeInsets.only(
                       left: 32.0, right: 32.0, top: 8.0, bottom: 8.0),
+
                   child: GlowText(
                     'Glow',
                   ),

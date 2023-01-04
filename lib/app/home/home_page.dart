@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
           fit: BoxFit.fill,
           colorFilter: ColorFilter.mode(
             AppColors.primary,
-            BlendMode.multiply,
+            BlendMode.hardLight,
           ),
         )),
         child: Align(

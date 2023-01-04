@@ -26,12 +26,12 @@ class Header extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(height: 80),
+              const SizedBox(height: 50),
               Container(
                 decoration: const BoxDecoration(boxShadow: [
                   BoxShadow(
                     spreadRadius: 2,
-                    blurRadius: 1.0,
+                    blurRadius: 5.0,
                     blurStyle: BlurStyle.normal,
                     color: AppColors.primary,
                   ),
